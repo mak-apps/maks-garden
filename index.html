@@ -1,56 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>MAK's Garden Journal</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f3f1ea;
-      color: #2f3b2f;
-      padding: 2rem;
-    }
-
-    h1 {
-      color: #355e3b;
-    }
-
-    .card {
-      background: white;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      margin-top: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>🌱 MAK’s Garden Journal</h1>
+  <header>
+    <h1>🌱 MAK’s Garden Journal</h1>
+    <p>Your coastal Vancouver Island garden companion</p>
+  </header>
 
-  <div class="card">
-    <h2>Garden Planning System</h2>
+  <main>
 
-    <p>
-      The greenhouse doors have officially opened.
-    </p>
+    <section class="garden-map">
 
-    <p>
-      Soon this app will track:
-    </p>
+      <h2>Main Garden</h2>
 
-    <ul>
-      <li>Plantings</li>
-      <li>Bed history</li>
-      <li>Soil amendments</li>
-      <li>Pests and treatments</li>
-      <li>Harvests</li>
-      <li>What worked and what absolutely invited cabbage moth chaos</li>
-    </ul>
-  </div>
+      <div class="bed-grid">
+
+        <div class="bed-card" onclick="openBed('1')">Bed 1</div>
+        <div class="bed-card" onclick="openBed('2')">Bed 2</div>
+        <div class="bed-card" onclick="openBed('3')">Bed 3</div>
+        <div class="bed-card" onclick="openBed('4')">Bed 4</div>
+        <div class="bed-card" onclick="openBed('5')">Bed 5</div>
+        <div class="bed-card" onclick="openBed('6')">Bed 6</div>
+        <div class="bed-card" onclick="openBed('7')">Bed 7</div>
+        <div class="bed-card" onclick="openBed('8')">Bed 8</div>
+        <div class="bed-card" onclick="openBed('9')">Bed 9</div>
+        <div class="bed-card" onclick="openBed('10')">Bed 10</div>
+
+      </div>
+
+    </section>
+
+    <section class="greenhouse-section">
+
+      <h2>Greenhouse</h2>
+
+      <div class="greenhouse-grid">
+
+        <div class="greenhouse-bed" onclick="openBed('GH-L1')">
+          Left Bed 1
+        </div>
+
+        <div class="greenhouse-bed" onclick="openBed('GH-L2')">
+          Left Bed 2
+        </div>
+
+        <div class="greenhouse-bed" onclick="openBed('GH-BR')">
+          Back Right Bed
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="bed-details" class="details-panel">
+
+      <h2>Bed Details</h2>
+
+      <div id="bed-content">
+        Tap a bed to view details.
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
 
 </body>
 </html>
