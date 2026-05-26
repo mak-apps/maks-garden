@@ -39,7 +39,25 @@ function renderBeds() {
     if (bed.Area === "Greenhouse") {
       card.className = "greenhouse-bed";
     } else {
-      card.className = "bed-card";
+      const hasPlantings = plantingLog.some(entry =>
+  String(entry.BedID) === String(bed.BedID)
+);
+
+const hasHarvests = harvests.some(entry =>
+  String(entry.BedID) === String(bed.BedID)
+);
+
+card.className = "bed-card";
+
+if (bed.Area === "Greenhouse") {
+  card.classList.add("greenhouse-bed");
+} else if (hasHarvests) {
+  card.classList.add("harvest-bed");
+} else if (hasPlantings) {
+  card.classList.add("active-bed");
+} else {
+  card.classList.add("empty-bed");
+}
     }
 
     const bedPlantings = plantingLog.filter(
