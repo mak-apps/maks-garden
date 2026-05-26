@@ -1,3 +1,53 @@
-index.html
-style.css
-app.js
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f1ea;
+  color: #2f3b2f;
+}
+
+header {
+  background: #355e3b;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+main {
+  padding: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+}
+
+.bed-grid,
+.greenhouse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.bed-card,
+.greenhouse-bed {
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: 0.2s;
+}
+
+.bed-card:hover,
+.greenhouse-bed:hover {
+  transform: translateY(-3px);
+}
+
+.details-panel {
+  margin-top: 2rem;
+  background: white;
+  border-radius: 14px;
+  padding: 1rem;
+  min-height: 120px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
