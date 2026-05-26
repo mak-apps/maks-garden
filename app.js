@@ -2,6 +2,7 @@ const API_URL = "https://script.google.com/macros/s/AKfycbzNpKSJH4Vr0T5L9Dm9EMzo
 
 let gardenBeds = [];
 let plantingLog = [];
+let harvests = [];
 
 async function loadGardenData() {
   const bedContent = document.getElementById("bed-content");
@@ -13,7 +14,8 @@ async function loadGardenData() {
     const data = await response.json();
 
     gardenBeds = data.beds || [];
-    plantingLog = data.plantingLog || [];
+plantingLog = data.plantingLog || [];
+harvests = data.harvests || [];
 
     renderBeds();
     bedContent.innerHTML = "Tap a bed to view details.";
@@ -90,7 +92,9 @@ function openBed(bedId) {
   const bedPlantings = plantingLog.filter(entry =>
     String(entry.BedID) === String(bedId)
   );
-
+const bedHarvests = harvests.filter(entry =>
+  String(entry.BedID) === String(bedId)
+);
   let plantingHtml = "";
 
   if (bedPlantings.length === 0) {
@@ -106,7 +110,21 @@ function openBed(bedId) {
       </div>
     `).join("");
   }
+let harvestHtml = "";
 
+if (bedHarvests.length === 0) {
+  harvestHtml = `<p>No harvest records yet for this bed.</p>`;
+} else {
+  harvestHtml = bedHarvests.map(entry => `
+    <div class="harvest-card">
+      <h4>${entry.Crop || "Unnamed crop"}</h4>
+      <p><strong>Harvest date:</strong> ${formatDate(entry.HarvestDate)}</p>
+      <p><strong>Quantity:</strong> ${entry.Quantity || "Not recorded"}</p>
+      <p><strong>Quality:</strong> ${entry.Quality || "Not recorded"}</p>
+      <p><strong>Notes:</strong><br>${entry.Notes || "No notes yet."}</p>
+    </div>
+  `).join("");
+}
   bedContent.innerHTML = `
     <h3>${bed.BedName}</h3>
 
@@ -122,6 +140,11 @@ function openBed(bedId) {
 
     <h3>Planting History</h3>
 ${plantingHtml}
+
+<hr>
+
+<h3>Harvest History</h3>
+${harvestHtml}
 
 <hr>
 
