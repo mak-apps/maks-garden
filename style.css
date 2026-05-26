@@ -51,3 +51,81 @@ h2 {
   min-height: 120px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
+.planting-card {
+  background: #f7f6ef;
+  border-left: 5px solid #6f8f5f;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 12px;
+}
+
+form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 600px;
+  margin-top: 1rem;
+}
+
+form label {
+  font-weight: bold;
+  color: #2f3b2f;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem;
+  border: 1px solid #c8c4b8;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fffdf7;
+}
+
+form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+form button {
+  background: #355e3b;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+form button:hover {
+  background: #284a2e;
+}
+
+@media (max-width: 700px) {
+  main {
+    padding: 0.75rem;
+  }
+
+  .bed-grid,
+  .greenhouse-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .bed-card,
+  .greenhouse-bed {
+    padding: 1rem;
+    min-height: 70px;
+  }
+
+  .details-panel {
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+  }
+}
