@@ -144,3 +144,42 @@ form button:hover {
 .bed-card.greenhouse-bed {
   border-top: 6px solid #5d8aa8;
 }
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background: #f7f6ef;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-color.active {
+  background: #5b8f49;
+}
+
+.legend-color.harvest {
+  background: #d4a437;
+}
+
+.legend-color.empty {
+  background: #9b8b6b;
+}
+
+.legend-color.greenhouse {
+  background: #5d8aa8;
+}
