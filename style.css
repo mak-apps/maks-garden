@@ -141,8 +141,9 @@ form button:hover {
   border-top: 6px solid #d4a437;
 }
 
-.bed-card.greenhouse-bed {
-  border-top: 6px solid #5d8aa8;
+.greenhouse-bed {
+  border-top: 6px solid #5d8aa8 !important;
+}
 }
 .legend {
   display: flex;
