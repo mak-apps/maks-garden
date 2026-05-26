@@ -121,8 +121,57 @@ function openBed(bedId) {
     <hr>
 
     <h3>Planting History</h3>
-    ${plantingHtml}
+${plantingHtml}
+
+<hr>
+
+<h3>Add New Planting</h3>
+
+<form onsubmit="savePlanting(event, '${bed.BedID}')">
+  <label>Crop</label>
+  <input name="Crop" required placeholder="Peas, tomato, garlic...">
+
+  <label>Variety</label>
+  <input name="Variety" placeholder="Green Arrow, Sungold...">
+
+  <label>Plant Date</label>
+  <input name="PlantDate" type="date">
+
+  <label>Notes</label>
+  <textarea name="Notes" placeholder="Trellis added, started indoors, slug patrol..."></textarea>
+
+  <button type="submit">Save Planting</button>
+</form>
   `;
 }
 
 loadGardenData();
+async function savePlanting(event, bedId) {
+  event.preventDefault();
+
+  const form = event.target;
+
+  const planting = {
+    BedID: bedId,
+    Crop: form.Crop.value,
+    Variety: form.Variety.value,
+    PlantDate: form.PlantDate.value,
+    HarvestDate: "",
+    Notes: form.Notes.value
+  };
+
+  try {
+    await fetch(API_URL, {
+      method: "POST",
+      body: JSON.stringify(planting)
+    });
+
+    form.reset();
+    await loadGardenData();
+    openBed(bedId);
+
+  } catch (error) {
+    alert("Could not save planting. The squirrel dropped the seed packet.");
+    console.error(error);
+  }
+}
