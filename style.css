@@ -129,3 +129,18 @@ form button:hover {
     max-width: 100%;
   }
 }
+.bed-card.empty-bed {
+  border-top: 6px solid #9b8b6b;
+}
+
+.bed-card.active-bed {
+  border-top: 6px solid #5b8f49;
+}
+
+.bed-card.harvest-bed {
+  border-top: 6px solid #d4a437;
+}
+
+.bed-card.greenhouse-bed {
+  border-top: 6px solid #5d8aa8;
+}
