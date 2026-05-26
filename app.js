@@ -3,6 +3,7 @@ const API_URL = "https://script.google.com/macros/s/AKfycbzNpKSJH4Vr0T5L9Dm9EMzo
 let gardenBeds = [];
 let plantingLog = [];
 let harvests = [];
+let treatments = [];
 
 async function loadGardenData() {
   const bedContent = document.getElementById("bed-content");
@@ -16,6 +17,7 @@ async function loadGardenData() {
     gardenBeds = data.beds || [];
 plantingLog = data.plantingLog || [];
 harvests = data.harvests || [];
+    treatments = data.treatments || [];
 
     renderBeds();
     bedContent.innerHTML = "Tap a bed to view details.";
@@ -113,6 +115,9 @@ function openBed(bedId) {
 const bedHarvests = harvests.filter(entry =>
   String(entry.BedID) === String(bedId)
 );
+  const bedTreatments = treatments.filter(entry =>
+  String(entry.BedID) === String(bedId)
+);
   let plantingHtml = "";
 
   if (bedPlantings.length === 0) {
@@ -143,6 +148,28 @@ if (bedHarvests.length === 0) {
     </div>
   `).join("");
 }
+  let treatmentHtml = "";
+
+if (bedTreatments.length === 0) {
+  treatmentHtml = `<p>No treatment records yet for this bed.</p>`;
+} else {
+  treatmentHtml = bedTreatments.map(entry => `
+    <div class="treatment-card">
+      <h4>${entry.Issue || "Garden issue"}</h4>
+
+      <p><strong>Date:</strong> ${formatDate(entry.Date)}</p>
+
+      <p><strong>Treatment:</strong><br>
+      ${entry.Treatment || "Not recorded"}</p>
+
+      <p><strong>Result:</strong><br>
+      ${entry.Result || "Not recorded"}</p>
+
+      <p><strong>Notes:</strong><br>
+      ${entry.Notes || "No notes yet."}</p>
+    </div>
+  `).join("");
+}
   bedContent.innerHTML = `
     <h3>${bed.BedName}</h3>
 
@@ -163,6 +190,11 @@ ${plantingHtml}
 
 <h3>Harvest History</h3>
 ${harvestHtml}
+
+<hr>
+
+<h3>Problems & Treatments</h3>
+${treatmentHtml}
 
 <hr>
 
