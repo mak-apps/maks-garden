@@ -29,11 +29,17 @@ harvests = data.harvests || [];
 }
 
 function renderBeds() {
-  const mainGarden = document.querySelector(".bed-grid");
-  const greenhouse = document.querySelector(".greenhouse-grid");
+ const mainGarden = document.querySelector(".bed-grid");
+const greenhouse = document.querySelector(".greenhouse-grid");
+const backGarden = document.querySelector(".back-garden-grid");
+const berries = document.querySelector(".berries-grid");
+const orchard = document.querySelector(".orchard-grid");
 
-  mainGarden.innerHTML = "";
-  greenhouse.innerHTML = "";
+mainGarden.innerHTML = "";
+greenhouse.innerHTML = "";
+backGarden.innerHTML = "";
+berries.innerHTML = "";
+orchard.innerHTML = ""; 
 
   gardenBeds.forEach(bed => {
     const card = document.createElement("div");
@@ -76,11 +82,17 @@ card.innerHTML = `
 `;
     card.onclick = () => openBed(bed.BedID);
 
-    if (bed.Area === "Greenhouse") {
-      greenhouse.appendChild(card);
-    } else if (bed.Area === "Main Garden") {
-      mainGarden.appendChild(card);
-    }
+  if (bed.Area === "Greenhouse") {
+  greenhouse.appendChild(card);
+} else if (bed.Area === "Main Garden") {
+  mainGarden.appendChild(card);
+} else if (bed.Area === "Back Garden") {
+  backGarden.appendChild(card);
+} else if (bed.Area === "Berry Area" || bed.Area === "Berries") {
+  berries.appendChild(card);
+} else if (bed.Area === "Orchard") {
+  orchard.appendChild(card);
+}  
   });
 }
 
