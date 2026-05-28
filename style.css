@@ -317,36 +317,34 @@ form button:hover {
 
 /* NORTH BOTTOM */
 
+.bed-1 {
+  bottom: 70px;
+  right: 190px;
+  width: 65px;
+  height: 65px;
+  transform: rotate(-12deg);
+}
+
 .bed-2 {
   bottom: 70px;
   left: 380px;
-
   width: 220px;
   height: 70px;
 }
 
 .bed-3 {
-  bottom: 70px;
-  left: 220px;
-
-  width: 70px;
-  height: 70px;
+  bottom: 80px;
+  left: 260px;
+  width: 65px;
+  height: 65px;
 }
 
 .bed-4 {
-  bottom: 70px;
-  left: 70px;
-
-  width: 70px;
-  height: 70px;
+  bottom: 80px;
+  left: 110px;
+  width: 65px;
+  height: 65px;
 }
-
-.bed-1 {
-  bottom: 70px;
-  right: 180px;
-
-  width: 70px;
-  height: 70px;
 }
 
 /* GREENHOUSE */
