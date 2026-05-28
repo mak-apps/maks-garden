@@ -335,8 +335,8 @@ form button:hover {
 }
 
 .bed-3 {
-  bottom: 75px;
-  left: 340px;
+  bottom: 72px;
+  left: 325px;
 
   width: 65px;
   height: 65px;
@@ -356,8 +356,8 @@ form button:hover {
 /* GREENHOUSE */
 
 .greenhouse-map {
-  top: 500px;
-  right: 150px;
+  top: 520px;
+  right: 165px;
 
   width: 110px;
   height: 150px;
@@ -434,10 +434,11 @@ form button:hover {
 }
 
 .pot-18 {
-  top: 500px;
-  right: 85px;
+  top: 520px;
+  right: 70px;
+
   width: 55px;
-  height: 120px;
+  height: 140px;
 }
 
 .map-label {
