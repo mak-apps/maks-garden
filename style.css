@@ -376,3 +376,107 @@ form button:hover {
 
   background: #fff4df;
 }
+.bed-11 {
+  top: 350px;
+  left: 430px;
+  width: 120px;
+  height: 70px;
+}
+
+.bed-12 {
+  top: 350px;
+  left: 150px;
+  width: 220px;
+  height: 70px;
+}
+
+.bed-13 {
+  top: 100px;
+  left: 250px;
+  width: 55px;
+  height: 220px;
+}
+
+.bed-14 {
+  top: 120px;
+  left: 460px;
+  width: 100px;
+  height: 130px;
+}
+
+.pot-15 {
+  top: 620px;
+  right: 75px;
+  width: 55px;
+  height: 130px;
+}
+
+.pot-16 {
+  top: 560px;
+  right: 75px;
+  width: 55px;
+  height: 90px;
+}
+
+.pot-17 {
+  top: 500px;
+  right: 155px;
+  width: 55px;
+  height: 120px;
+}
+
+.pot-18 {
+  top: 500px;
+  right: 85px;
+  width: 55px;
+  height: 120px;
+}
+
+.map-label {
+  position: absolute;
+  font-weight: bold;
+  color: #2f3b2f;
+  text-align: center;
+}
+
+.shed-label {
+  top: 300px;
+  right: 35px;
+  background: #666;
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.potting-label {
+  top: 120px;
+  right: 30px;
+}
+
+.cherry-left,
+.cherry-right {
+  position: absolute;
+  font-size: 2rem;
+}
+
+.cherry-left {
+  top: 140px;
+  left: 130px;
+}
+
+.cherry-right {
+  top: 140px;
+  left: 650px;
+}
+
+.north-label {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.south-label {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
