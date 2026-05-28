@@ -335,15 +335,13 @@ form button:hover {
 }
 
 .bed-3 {
-  bottom: 140px;
-  left: 360px;
+  bottom: 70px;
+  left: 335px;
 
-  width: 90px;
-  height: 90px;
+  width: 65px;
+  height: 65px;
 
-  background: #ffd6d6;
-
-  z-index: 50;
+  z-index: 7;
 }
 
 .bed-4 {
@@ -358,15 +356,19 @@ form button:hover {
 /* GREENHOUSE */
 
 .greenhouse-map {
-  top: 460px;
-  left: 690px;
+  top: 470px;
+  right: 170px;
 
   width: 140px;
-  height: 120px;
+  height: 140px;
 
-  background: #dcefff;
+  background: #c7def1;
 
-  border-color: #5c8db8;
+  border: 4px solid #5d8aa8;
+
+  border-radius: 12px;
+
+  z-index: 3;
 }
 
 /* ORCHARD */
