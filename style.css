@@ -184,3 +184,195 @@ form button:hover {
 .legend-color.greenhouse {
   background: #5d8aa8;
 }
+.garden-map-section {
+  margin: 2rem 0;
+}
+
+.garden-map {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 900px;
+
+  margin: 0 auto 3rem auto;
+
+  background: #f7f5ee;
+
+  border: 8px solid #222;
+
+  border-radius: 8px;
+}
+
+.map-bed {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+
+  border: 3px solid #444;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+
+  transition: transform 0.2s ease;
+}
+
+.map-bed:hover {
+  transform: scale(1.05);
+}
+
+/* NORTH ROW */
+
+.bed-13 {
+  top: 70px;
+  left: 220px;
+
+  width: 60px;
+  height: 220px;
+}
+
+.bed-14 {
+  top: 100px;
+  left: 420px;
+
+  width: 120px;
+  height: 140px;
+}
+
+/* CENTER */
+
+.bed-12 {
+  top: 340px;
+  left: 120px;
+
+  width: 220px;
+  height: 70px;
+}
+
+.bed-11 {
+  top: 340px;
+  left: 430px;
+
+  width: 140px;
+  height: 70px;
+}
+
+.bed-10 {
+  top: 470px;
+  left: 250px;
+
+  width: 200px;
+  height: 70px;
+}
+
+.bed-9 {
+  top: 470px;
+  left: 540px;
+
+  width: 90px;
+  height: 110px;
+}
+
+/* LOWER BEDS */
+
+.bed-8 {
+  top: 620px;
+  left: 60px;
+
+  width: 90px;
+  height: 220px;
+}
+
+.bed-7 {
+  top: 660px;
+  left: 220px;
+
+  width: 90px;
+  height: 180px;
+}
+
+.bed-6 {
+  top: 660px;
+  left: 380px;
+
+  width: 90px;
+  height: 180px;
+}
+
+.bed-5 {
+  top: 660px;
+  left: 540px;
+
+  width: 90px;
+  height: 180px;
+}
+
+/* NORTH BOTTOM */
+
+.bed-2 {
+  bottom: 70px;
+  left: 380px;
+
+  width: 220px;
+  height: 70px;
+}
+
+.bed-3 {
+  bottom: 70px;
+  left: 220px;
+
+  width: 70px;
+  height: 70px;
+}
+
+.bed-4 {
+  bottom: 70px;
+  left: 70px;
+
+  width: 70px;
+  height: 70px;
+}
+
+.bed-1 {
+  bottom: 70px;
+  right: 180px;
+
+  width: 70px;
+  height: 70px;
+}
+
+/* GREENHOUSE */
+
+.greenhouse-map {
+  top: 460px;
+  left: 690px;
+
+  width: 140px;
+  height: 120px;
+
+  background: #dcefff;
+
+  border-color: #5c8db8;
+}
+
+/* ORCHARD */
+
+.orchard-map {
+  top: 120px;
+  right: 120px;
+
+  width: 80px;
+  height: 80px;
+
+  border-radius: 50%;
+
+  background: #fff4df;
+}
