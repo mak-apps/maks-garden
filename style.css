@@ -334,13 +334,12 @@ form button:hover {
   height: 70px;
 }
 
-.bed-4 {
-  bottom: 105px;
-  left: 55px;
+.bed-3 {
+  bottom: 90px;
+  left: 310px;
   width: 65px;
   height: 65px;
-  transform: rotate(22deg);
-  z-index: 6;
+  z-index: 5;
 }
 
 .bed-4 {
