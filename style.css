@@ -335,14 +335,15 @@ form button:hover {
 }
 
 .bed-3 {
-  bottom: 85px;
-  left: 360px;
+  bottom: 75px;
+  left: 340px;
 
   width: 65px;
   height: 65px;
 
   z-index: 7;
 }
+
 .bed-4 {
   bottom: 105px;
   left: 55px;
