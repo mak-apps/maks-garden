@@ -335,11 +335,15 @@ form button:hover {
 }
 
 .bed-3 {
-  bottom: 90px;
-  left: 310px;
-  width: 65px;
-  height: 65px;
-  z-index: 5;
+  bottom: 140px;
+  left: 360px;
+
+  width: 90px;
+  height: 90px;
+
+  background: #ffd6d6;
+
+  z-index: 50;
 }
 
 .bed-4 {
