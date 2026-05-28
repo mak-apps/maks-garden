@@ -289,6 +289,7 @@ form button:hover {
 
   width: 90px;
   height: 220px;
+  z-index: 2;
 }
 
 .bed-7 {
@@ -297,6 +298,7 @@ form button:hover {
 
   width: 90px;
   height: 180px;
+  z-index: 2;
 }
 
 .bed-6 {
@@ -332,20 +334,22 @@ form button:hover {
   height: 70px;
 }
 
-.bed-3 {
-  bottom: 110px;
-  left: 300px;
+.bed-4 {
+  bottom: 105px;
+  left: 55px;
   width: 65px;
   height: 65px;
+  transform: rotate(22deg);
+  z-index: 6;
 }
 
 .bed-4 {
-  bottom: 110px;
-  left: 120px;
+  bottom: 105px;
+  left: 55px;
   width: 65px;
   height: 65px;
-
-  transform: rotate(14deg);
+  transform: rotate(22deg);
+  z-index: 6;
 }
 }
 
