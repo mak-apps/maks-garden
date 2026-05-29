@@ -325,7 +325,7 @@ form button:hover {
   right: 190px;
   width: 65px;
   height: 65px;
-  transform: rotate(-12deg);
+  transform: rotate(-18deg);
 }
 
 .bed-2 {
@@ -350,7 +350,7 @@ form button:hover {
   left: 55px;
   width: 65px;
   height: 65px;
-  transform: rotate(22deg);
+  transform: rotate(30deg);
   z-index: 6;
 }
 
