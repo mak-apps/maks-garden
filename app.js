@@ -223,6 +223,27 @@ ${treatmentHtml}
 
   <button type="submit">Save Planting</button>
 </form>
+<hr>
+
+<h3>Add Harvest</h3>
+
+<form onsubmit="saveHarvest(event, '${bed.BedID}')">
+
+<label>Crop</label>
+<input name="Crop" required placeholder="Garlic, peas, tomatoes...">
+
+<label>Harvest Date</label>
+<input name="HarvestDate" type="date">
+
+<label>Quantity</label>
+<input name="Quantity" placeholder="5 lbs, 2 baskets, 18 bulbs">
+
+<label>Notes</label>
+<textarea name="Notes" placeholder="First harvest, excellent size..."></textarea>
+
+<button type="submit">Save Harvest</button>
+
+</form>
   `;
 }
 
@@ -255,4 +276,41 @@ async function savePlanting(event, bedId) {
     alert("Could not save planting. The squirrel dropped the seed packet.");
     console.error(error);
   }
+}
+async function saveHarvest(event, bedId) {
+
+    event.preventDefault();
+
+    const form = event.target;
+
+    const harvest = {
+        BedID: bedId,
+        Crop: form.Crop.value,
+        HarvestDate: form.HarvestDate.value,
+        Quantity: form.Quantity.value,
+        Notes: form.Notes.value
+    };
+
+    try {
+
+        await fetch(API_URL, {
+            method: "POST",
+            body: JSON.stringify({
+                action: "addHarvest",
+                data: harvest
+            })
+        });
+
+        alert("Harvest saved!");
+
+        loadGardenData();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("Could not save harvest.");
+
+    }
+
 }
