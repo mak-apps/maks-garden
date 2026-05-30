@@ -510,3 +510,25 @@ form button:hover {
 .status-renovation {
   background: #b79a7a;
 }
+
+/* Keep angled beds angled when tapped or selected */
+
+.bed-1 {
+  transform: rotate(-12deg);
+}
+
+.bed-1:hover,
+.bed-1.selected,
+.bed-1.active {
+  transform: rotate(-12deg) scale(1.05);
+}
+
+.bed-4 {
+  transform: rotate(26deg);
+}
+
+.bed-4:hover,
+.bed-4.selected,
+.bed-4.active {
+  transform: rotate(26deg) scale(1.05);
+}
