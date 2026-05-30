@@ -68,14 +68,10 @@ if (bed.Area === "Greenhouse") {
 }
     }
 
-    const bedPlantings = plantingLog.filter(
-  log => log.BedID == bed.BedID
-);
-
-const currentCrops = bedPlantings.map(
-  log => log.Crop
-).join(", ");
-
+const currentCrops =
+  bed.CurrentUse ||
+  bedPlantings.map(log => log.Crop).join(", ");
+    
 card.innerHTML = `
   <strong>${bed.BedName}</strong><br>
   <small>${currentCrops || "Empty bed"}</small>
