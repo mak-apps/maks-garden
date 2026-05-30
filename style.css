@@ -489,3 +489,24 @@ form button:hover {
   left: 50%;
   transform: translateX(-50%);
 }
+/* BED STATUS COLORS */
+
+.status-growing {
+  background: #7cb342;
+}
+
+.status-herb {
+  background: #8fae8f;
+}
+
+.status-pollinator {
+  background: #c8a2c8;
+}
+
+.status-greenhouse {
+  background: #7fb3d5;
+}
+
+.status-renovation {
+  background: #b79a7a;
+}
