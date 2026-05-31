@@ -223,6 +223,7 @@ ${treatmentHtml}
 
   <button type="submit">Save Planting</button>
 </form>
+
 <hr>
 
 <h3>Add Harvest</h3>
@@ -244,6 +245,33 @@ ${treatmentHtml}
 <button type="submit">Save Harvest</button>
 
 </form>
+
+<button type="submit">Save Harvest</button>
+
+</form>
+
+<hr>
+
+<h3>Add Treatment</h3>
+
+<form onsubmit="saveTreatment(event, '${bed.BedID}')">
+
+<label>Problem</label>
+<input name="Problem" required placeholder="Slugs, ants, cabbage moths...">
+
+<label>Treatment Date</label>
+<input name="TreatmentDate" type="date">
+
+<label>Treatment</label>
+<input name="Treatment" placeholder="Row cover, BT, compost, hand picking...">
+
+<label>Notes</label>
+<textarea name="Notes" placeholder="What happened and what you tried..."></textarea>
+
+<button type="submit">Save Treatment</button>
+
+</form>
+
   `;
 }
 
