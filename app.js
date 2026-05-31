@@ -338,3 +338,41 @@ async function saveHarvest(event, bedId) {
     }
 
 }
+
+async function saveTreatment(event, bedId) {
+
+    event.preventDefault();
+
+    const form = event.target;
+
+    const treatment = {
+        BedID: bedId,
+        Problem: form.Problem.value,
+        TreatmentDate: form.TreatmentDate.value,
+        Treatment: form.Treatment.value,
+        Notes: form.Notes.value
+    };
+
+    try {
+
+        await fetch(API_URL, {
+            method: "POST",
+            body: JSON.stringify({
+                action: "addTreatment",
+                data: treatment
+            })
+        });
+
+        alert("Treatment saved!");
+
+        loadGardenData();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("Could not save treatment.");
+
+    }
+
+}
