@@ -246,10 +246,6 @@ ${treatmentHtml}
 
 </form>
 
-<button type="submit">Save Harvest</button>
-
-</form>
-
 <hr>
 
 <h3>Add Treatment</h3>
