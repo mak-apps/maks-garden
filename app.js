@@ -181,7 +181,10 @@ ${entry.Notes || "No notes yet."}</p>
     <p><strong>Area:</strong> ${bed.Area || "Not recorded"}</p>
     <p><strong>Size:</strong> ${bed.Size || "Not recorded yet"}</p>
     <p><strong>Sun:</strong> ${bed.Sun || "Not recorded yet"}</p>
-    <p><strong>Current use:</strong> ${bed.CurrentUse || "Not recorded yet"}</p>
+    <div class="current-crop-box">
+  <h3>🌱 Current Crop</h3>
+  <p>${bed.CurrentUse || "Not recorded yet."}</p>
+</div>
 
     <p><strong>Notes:</strong><br>
     ${bed.Notes || "No notes yet."}</p>
