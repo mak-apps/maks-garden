@@ -427,7 +427,7 @@ async function saveBedInfo(event, bedId) {
 
         alert("Bed information updated!");
 
-        loadGardenData();
+        openBed(bedId);
 
     } catch (error) {
 
