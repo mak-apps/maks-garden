@@ -188,8 +188,33 @@ if (bedTreatments.length === 0) {
 
     <p><strong>Notes:</strong><br>
     ${bed.Notes || "No notes yet."}</p>
+<h3>Update Bed Info</h3>
 
-    <hr>
+<form onsubmit="saveBedInfo(event, '${bed.BedID}')">
+
+<label>Current Use</label>
+<input name="CurrentUse"
+       value="${bed.CurrentUse || ""}">
+
+<label>Sun</label>
+<input name="Sun"
+       value="${bed.Sun || ""}">
+
+<label>Size</label>
+<input name="Size"
+       value="${bed.Size || ""}">
+
+<label>Notes</label>
+<textarea name="Notes">${bed.Notes || ""}</textarea>
+
+<button type="submit">
+💾 Save Bed Info
+</button>
+
+</form>
+
+<hr>
+
 
     <h3>Planting History</h3>
 ${plantingHtml}
