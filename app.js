@@ -401,3 +401,40 @@ async function saveTreatment(event, bedId) {
     }
 
 }
+async function saveBedInfo(event, bedId) {
+
+    event.preventDefault();
+
+    const form = event.target;
+
+    const bedInfo = {
+        BedID: bedId,
+        CurrentUse: form.CurrentUse.value,
+        Sun: form.Sun.value,
+        Size: form.Size.value,
+        Notes: form.Notes.value
+    };
+
+    try {
+
+        await fetch(API_URL, {
+            method: "POST",
+            body: JSON.stringify({
+                action: "updateBed",
+                data: bedInfo
+            })
+        });
+
+        alert("Bed information updated!");
+
+        loadGardenData();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("Could not update bed.");
+
+    }
+
+}
