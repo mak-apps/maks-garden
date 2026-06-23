@@ -163,18 +163,15 @@ if (bedTreatments.length === 0) {
 } else {
   treatmentHtml = bedTreatments.map(entry => `
     <div class="treatment-card">
-      <h4>${entry.Issue || "Garden issue"}</h4>
+  <h4>${entry.Problem || "Garden issue"}</h4>
 
-      <p><strong>Date:</strong> ${formatDate(entry.Date)}</p>
+<p><strong>Date:</strong> ${formatDate(entry.TreatmentDate)}</p>
 
-      <p><strong>Treatment:</strong><br>
-      ${entry.Treatment || "Not recorded"}</p>
+<p><strong>Treatment:</strong><br>
+${entry.Treatment || "Not recorded"}</p>
 
-      <p><strong>Result:</strong><br>
-      ${entry.Result || "Not recorded"}</p>
-
-      <p><strong>Notes:</strong><br>
-      ${entry.Notes || "No notes yet."}</p>
+<p><strong>Notes:</strong><br>
+${entry.Notes || "No notes yet."}</p>
     </div>
   `).join("");
 }
